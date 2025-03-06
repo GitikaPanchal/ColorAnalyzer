@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Color Analyzer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Image Color Analyzer</h1>
+
+      <div class="upload-section">
+        <label for="imageUpload" class="upload-btn">Choose Image</label>
+        <input type="file" id="imageUpload" accept="image/*" />
+        <p id="fileName">No file chosen</p>
+      </div>
+
+      <div class="preview-section">
+        <div class="image-preview">
+          <h2>Image Preview</h2>
+          <img id="preview" src="" alt="Preview" />
+        </div>
+
+        <div class="results">
+          <div id="loadingIndicator" class="hidden">
+            <div class="progress-container">
+              <div id="progressBar" class="progress-bar"></div>
+            </div>
+            <p>Analyzing colors...</p>
+          </div>
+
+          <div id="colorResults" class="hidden">
+            <h2>Top 5 Dominant Colors</h2>
+            <div id="colorPalette" class="color-palette"></div>
+
+            <div class="text-preview-section">
+              <h3>Text Preview</h3>
+              <div id="textPreview" class="text-preview">
+                <p id="sampleText">Sample Text</p>
+              </div>
+              <input
+                type="text"
+                id="customText"
+                placeholder="Enter custom text"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="color.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
